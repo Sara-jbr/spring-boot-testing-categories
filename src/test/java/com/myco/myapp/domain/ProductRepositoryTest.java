@@ -1,8 +1,8 @@
-package com.sara.myapp.domain;
+package com.myco.myapp.domain;
 
 
-import com.sara.myapp.doamin.Product;
-import com.sara.myapp.repository.ProductRepository;
+import com.myco.myapp.doamin.Product;
+import com.myco.myapp.repository.ProductRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -24,13 +24,16 @@ class ProductRepositoryTest {
 
     @Test
     void shouldGetAllActiveProducts() {
-        entityManager.persist(new Product(null, "pname1", "pdescr1", BigDecimal.TEN, false));
-        entityManager.persist(new Product(null, "pname2", "pdescr2", BigDecimal.TEN, true));
+        //Arrange
+        entityManager.persist(new Product(null, "book", "this book about animals", BigDecimal.TEN, false));
+        entityManager.persist(new Product(null, "pencil", "this pen has high quality for paining", BigDecimal.TEN, true));
 
+        //Act
         List<Product> products = productRepository.findAllActiveProducts();
 
+        //Assert
         assertThat(products).hasSize(1);
-        assertThat(products.get(0).getName()).isEqualTo("pname1");
+        assertThat(products.get(0).getName()).isEqualTo("book");
     }
 }
 

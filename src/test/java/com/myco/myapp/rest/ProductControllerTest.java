@@ -1,7 +1,7 @@
-package com.sara.myapp.rest;
+package com.myco.myapp.rest;
 
 
-import com.sara.myapp.service.ProductService;
+import com.myco.myapp.service.ProductService;
 import org.junit.jupiter.api.Test;
 import org.mockito.BDDMockito;
 import org.springframework.beans.factory.annotation.Autowired;

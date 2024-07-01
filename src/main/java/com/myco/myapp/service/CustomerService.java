@@ -1,7 +1,9 @@
-package com.sara.myapp.service;
+package com.myco.myapp.service;
 
-import com.sara.myapp.doamin.Customer;
-import com.sara.myapp.repository.CustomerRepository;
+import com.myco.myapp.repository.CustomerRepository;
+import com.myco.myapp.doamin.Customer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -11,10 +13,11 @@ import java.util.List;
 @Transactional
 public class CustomerService {
     private final CustomerRepository customerRepository;
+    private static final Logger logger = LoggerFactory.getLogger(ProductService.class);
 
     public CustomerService(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
-        System.out.println("--------CustomerService()---------");
+        logger.info("--------CustomerService()---------");
     }
 
     @Transactional(readOnly = true)

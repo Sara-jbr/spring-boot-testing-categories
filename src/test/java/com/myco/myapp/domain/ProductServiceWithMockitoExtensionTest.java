@@ -1,8 +1,8 @@
-package com.sara.myapp.domain;
+package com.myco.myapp.domain;
 
-import com.sara.myapp.doamin.Product;
-import com.sara.myapp.repository.ProductRepository;
-import com.sara.myapp.service.ProductService;
+import com.myco.myapp.repository.ProductRepository;
+import com.myco.myapp.doamin.Product;
+import com.myco.myapp.service.ProductService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.BDDMockito;
@@ -27,8 +27,8 @@ class ProductServiceWithMockitoExtensionTest {
     @Test
     void shouldReturnOnlyActiveProducts() {
         //Arrange
-        Product p1 = new Product(1L, "p-name1", "p-desc1", BigDecimal.TEN, false);
-        Product p2 = new Product(2L, "p-name2", "p-desc2", BigDecimal.TEN, true);
+        Product p1 = new Product(1L, "lenovo", "type-1", BigDecimal.TEN, false);
+        Product p2 = new Product(2L, "asus", "type-2", BigDecimal.TEN, true);
         BDDMockito.given(productRepository.findAll()).willReturn(List.of(p1, p2));
 
         //Act

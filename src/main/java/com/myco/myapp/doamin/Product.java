@@ -1,4 +1,4 @@
-package com.sara.myapp.doamin;
+package com.myco.myapp.doamin;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

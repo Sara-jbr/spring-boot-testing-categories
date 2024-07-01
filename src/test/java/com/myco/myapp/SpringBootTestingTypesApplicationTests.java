@@ -1,4 +1,4 @@
-package com.sara.myapp;
+package com.myco.myapp;
 
 
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package com.sara.myapp.rest;
+package com.myco.myapp.rest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

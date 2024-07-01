@@ -1,8 +1,8 @@
-package com.sara.myapp.domain;
+package com.myco.myapp.domain;
 
-import com.sara.myapp.doamin.Product;
-import com.sara.myapp.repository.ProductRepository;
-import com.sara.myapp.service.ProductService;
+import com.myco.myapp.doamin.Product;
+import com.myco.myapp.repository.ProductRepository;
+import com.myco.myapp.service.ProductService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.BDDMockito;
@@ -27,8 +27,8 @@ class ProductServiceTest {
     @Test
     void shouldReturnOnlyActiveProducts() {
         //Arrange
-        Product p1 = new Product(1L, "p-name1", "p-desc1", BigDecimal.TEN, false);
-        Product p2 = new Product(2L, "p-name2", "p-desc2", BigDecimal.TEN, true);
+        Product p1 = new Product(1L, "book", "this book about animals", BigDecimal.TEN, false);
+        Product p2 = new Product(2L, "pencil", "this pen has high quality for paining", BigDecimal.TEN, true);
         BDDMockito.given(productRepository.findAll()).willReturn(List.of(p1, p2));
 
         //Act
