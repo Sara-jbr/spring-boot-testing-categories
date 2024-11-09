@@ -2,9 +2,9 @@
 
 ## Prerequisites
 
-- **JDK 8+**
-- **Maven** or **Gradle** installed
-- An **IDE** of your choice (Eclipse, IntelliJ IDEA, VS Code, etc.)
+- [**JDK 8+**](https://adoptopenjdk.net/)  
+- [**Maven**](https://maven.apache.org/) or [**Gradle**](https://gradle.org/) installed  
+- An [**IDE**](https://www.eclipse.org/) of your choice (Eclipse, [IntelliJ IDEA](https://www.jetbrains.com/idea/), [VS Code](https://code.visualstudio.com/), etc.)
 
 ## Overview
 
